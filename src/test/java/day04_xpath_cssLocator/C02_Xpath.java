@@ -17,7 +17,7 @@ public class C02_Xpath {
     5- "Add/Remove Elements" yazisinin görünür oldugunu test edin
     */
 
-        System.setProperty("webdriver.chrome.driver", "resources/drivers/chromedriver.exe");
+         System.setProperty("webdriver.chrome.driver", "resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -25,7 +25,8 @@ public class C02_Xpath {
         //1- https://the-internet.herokuapp.com/add_remove_elements/ adresine gidin
         driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
         //2- add element butonuna basin
-        driver.findElement(By.xpath("//button[@onclick='addElement()']")).click();
+        //driver.findElement(By.xpath("//button[@onclick='addElement()']")).click(); --> kullanilabilir
+        driver.findElement(By.xpath("//button[text()='Add Element']")).click();
 
         //3- Delete butonunun görünür oldugunu test edin
         //System.out.println(driver.findElement(By.xpath("//button[@class='added-manually']")).isDisplayed() ? "Displayed test PASSED" : "Displayed test FAILED");
