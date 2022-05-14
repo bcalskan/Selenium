@@ -39,12 +39,10 @@ public class Q2 {
         login.sendKeys("username");
 
         //4. Password alanine "password" yazdirin
-        //<input type="password" id="user_password" name="user_password" tabindex="2" autocomplete="off">
         WebElement password = driver.findElement(By.xpath("//input[@id='user_password']"));
         password.sendKeys("password");
 
         //5. Sign in buttonuna tiklayin
-        //<input type="submit" name="submit" value="Sign in" class="btn btn-primary" tabindex="4">
         WebElement signInTikla = driver.findElement(By.xpath("//input[@name='submit']"));
         signInTikla.click();
         driver.navigate().back();
