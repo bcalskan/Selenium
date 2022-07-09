@@ -16,8 +16,6 @@ public class ilkClass {
         ikincisi ise bu driverin fiziki yolu :
          */
 
-
-
         System.setProperty("webdriver.chrome.driver", "resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
